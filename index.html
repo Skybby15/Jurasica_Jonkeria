@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonkeria</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <img src="logo-jurasica-500.png" alt="Dinosaur Icon">
+    <h1>Jonkeria</h1>
+</header>
+<nav>
+    <a href="#"></a>
+    <a href="#"></a>
+    <a href="#"></a>
+</nav>
+<main>
+    <div class="image-container">
+        <img src="1.jpg" alt="Jonkeria 1 Icon" >
+        <img src="2.jpg" alt="Jonkeria 2 Icon" >
+        <img src="3.jpg" alt="Jonkeria 3 Icon" >
+        <img src="4.jpg" alt="Jonkeria 4 Icon" >
+    </div>
+    <h2>Română</h2>
+    <button class="button" id="play-romana">
+        <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="26px">
+            <path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" fill="#036307"></path>
+        </svg>
+    </button>
+    <p id="romana-text"> Jonkeria, numită de Van Hoepen în 1916, este un gen de therapsid din perioada Permianului mijlociu. Fosilele sale au fost descoperite în regiunea Karoo din Africa de Sud.  Clasificată în Chordata, Synapsida, Therapsida, Dinocephalia, Tapinocephalia și Titanosuchidae, Jonkeria include mai multe specii: truculenta (specia tip), boonstrai, haughtoni, ingens, koupensis, parva, rossouwi și vanderbyli.  Jonkeria este de obicei descrisă ca un erbivor, deși unii au speculat că ar fi putut fi un carnivor. În general, măsura în jur de 3 metri lungime, unele exemplare ajungând până la 5 metri.  Au fost descoperite numeroase fosile individuale, oferind o perspectivă substanțială asupra anatomiei și stilului său de viață. Jonkeria se remarcă prin construcția sa robustă și dimensiunile mari în comparație cu alte terapii contemporane.</p>
+
+    <h2>English</h2>
+    <button class="button" id="play-engleza">
+        <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="26px">
+            <path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" fill="#036307"></path>
+        </svg>
+    </button>
+    <p id="engleza-text"> Jonkeria, named by Van Hoepen in 1916, is a genus of therapsid from the Middle Permian period. Its fossils have been discovered in the Karoo region of South Africa.
+
+        Classified under Chordata, Synapsida, Therapsida, Dinocephalia, Tapinocephalia, and Titanosuchidae, Jonkeria includes multiple species: J. truculenta (the type species), J. boonstrai, J. haughtoni, J. ingens, J. koupensis, J. parva, J. rossouwi, and J. vanderbyli.
+
+        Jonkeria is typically described as an herbivore, though some have speculated it might have been a carnivore. It generally measured around 3 meters in length, with some specimens reaching up to 5 meters.
+
+        Numerous individual fossils have been discovered, providing substantial insight into its anatomy and lifestyle. Jonkeria is notable for its robust build and large size compared to other contemporary therapsids.</p><br>
+</main>
+<footer>
+    <script>
+        const romanaAudio = new Audio('Jonkeria_romana_voice.mp3');
+        const englezaAudio = new Audio('Jonkeria_engleza_voice.mp3');
+
+        const playRomana = document.getElementById('play-romana');
+        const romanaText = document.getElementById('romana-text');
+        const playEngleza = document.getElementById('play-engleza');
+        const englezaText = document.getElementById('engleza-text');
+
+        playRomana.addEventListener('click', () => {
+            if (romanaAudio.paused) {
+                romanaAudio.play();
+                playRomana.innerHTML = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="26px"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" fill="currentColor"></path></svg>';
+            } else {
+                romanaAudio.pause();
+                playRomana.innerHTML = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="26px"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" fill="currentColor"></path></svg> Pause';
+            }
+        });
+
+        playEngleza.addEventListener('click', () => {
+            if (englezaAudio.paused) {
+                englezaAudio.play();
+                playEngleza.innerHTML = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="26px"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" fill="currentColor"></path></svg>';
+            } else {
+                englezaAudio.pause();
+                playEngleza.innerHTML = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="26px"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" fill="currentColor"></path></svg> Pause';
+            }
+        });
+    </script>
+    &copy; 2024 Jurasica Adventure Park. All rights reserved.
+</footer>
+
+</body>
+</html>
